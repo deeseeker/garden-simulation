@@ -123,15 +123,16 @@ intentflow/
 
 ### Key Technologies
 
-- **Framework**: Next.js 14 with App Router
-- **Language**: TypeScript for type safety
-- **Styling**: Tailwind CSS for utility-first styling
-- **UI Components**: shadcn/ui for consistent design system
-- **Animations**: Framer Motion for smooth interactions
-- **State Management**: Zustand for lightweight state handling
-- **Icons**: Lucide React for consistent iconography
+- **Framework**: Next.js 14 with App Router  
+- **Language**: TypeScript for type safety  
+- **Styling**: Tailwind CSS for utility-first styling  
+- **UI Components**: shadcn/ui for consistent design system  
+- **Animations**: Framer Motion for smooth interactions  
+- **State Management**: Zustand for lightweight state handling  
+- **Icons**: Lucide React for consistent iconography  
 
 ## 🎨 Design System
+
 ### Color Palette (Garden Protocol)
 
 ```css
@@ -146,27 +147,6 @@ intentflow/
 /* Alternative Colorway 2 */
 --garden-rose-500: #FCB9C2;    /* Accent background */
 --garden-orange-500: #FDD79D;  /* Accent gradient */
-
-
-### Typography
-- **Font Stack**: System fonts for optimal performance and consistency
-- **Responsive Scaling**: Automatic font size adjustments across breakpoints
-- **Hierarchy**: Clear typographic hierarchy for improved readability
-
-### Color Palette (Garden Protocol)
-\`\`\`css
-/* Main Colorway */
---garden-mint-500: #7BDCBA    /* Primary background */
---garden-blue-500: #9BC8FF    /* Primary gradient */
-
-/* Alternative Colorway 1 */
---garden-sky-500: #8DC0FF     /* Alt background */
---garden-pink-500: #FFBBD3    /* Alt gradient */
-
-/* Alternative Colorway 2 */
---garden-rose-500: #FCB9C2    /* Accent background */
---garden-orange-500: #FDD79D  /* Accent gradient */
-\`\`\`
 
 
 ### Code Style and Standards
