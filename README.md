@@ -4,7 +4,7 @@
 
 A comprehensive Next.js application that visually simulates the complete lifecycle of an intent in the Garden Protocol. Built with modern web technologies and optimized for performance, accessibility, and user experience.
 
-![IntentFlow Demo](https://via.placeholder.com/800x400/7BDCBA/FFFFFF?text=IntentFlow+Demo)
+![IntentFlow Demo](https://via.placeholder.com/800x400/7BDCBA/FFFFFF?text=IntentFlow+Demo](https://garden-simulation.vercel.app/))
 
 ## 🎯 Overview
 
@@ -51,7 +51,7 @@ IntentFlow provides an educational and interactive experience for understanding 
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/garden-protocol/intentflow.git
+   git clone git@github.com:username/garden-simulation.git
    cd intentflow
    ```
 
