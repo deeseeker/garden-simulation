@@ -50,28 +50,28 @@ IntentFlow provides an educational and interactive experience for understanding 
 ### Installation
 
 1. **Clone the repository**
-   \`\`\`bash
+   ```bash
    git clone https://github.com/garden-protocol/intentflow.git
    cd intentflow
-   \`\`\`
+   ```
 
 2. **Install dependencies**
-   \`\`\`bash
+   ```bash
    npm install
    # or
    yarn install
    # or
    pnpm install
-   \`\`\`
+   ```
 
 3. **Start development server**
-   \`\`\`bash
+   ```bash
    npm run dev
    # or
    yarn dev
    # or
    pnpm dev
-   \`\`\`
+   ```
 
 4. **Open in browser**
    Navigate to [http://localhost:3000](http://localhost:3000)
@@ -121,7 +121,7 @@ intentflow/
 
 
 ### Color Palette (Garden Protocol)
-\`\`\`css
+```css
 /* Main Colorway */
 --garden-mint-500: #7BDCBA    /* Primary background */
 --garden-blue-500: #9BC8FF    /* Primary gradient */
@@ -133,7 +133,7 @@ intentflow/
 /* Alternative Colorway 2 */
 --garden-rose-500: #FCB9C2    /* Accent background */
 --garden-orange-500: #FDD79D  /* Accent gradient */
-\`\`\`
+```
 
 ### Code Style and Standards
 
@@ -149,9 +149,6 @@ This project follows Vercel and Lee Robinson's best practices:
 - **Composition**: Favor composition over inheritance
 - **Custom Hooks**: Extract reusable logic into custom hooks
 - **Error Boundaries**: Graceful error handling throughout the application
-
-
-\`\`\`
 
 ## 🎯 Usage Guide
 
