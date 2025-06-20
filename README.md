@@ -79,33 +79,34 @@ IntentFlow provides an educational and interactive experience for understanding 
 ## 🏗️ Project Architecture
 
 ### Directory Structure
+```plaintext
 intentflow/
 ├── app/                     # Next.js App Router
-│   ├── globals.css          # Global styles and CSS variables
-│   ├── layout.tsx           # Root layout with metadata
-│   └── page.tsx             # Main application page
-├── components/              # React components
-│   ├── ui/                  # Reusable UI components (shadcn/ui)
-│   ├── intent-builder.tsx   # Quote request interface
-│   ├── intent-signing.tsx   # Intent signing simulation
+│   ├── globals.css         # Global styles and CSS variables
+│   ├── layout.tsx          # Root layout with metadata
+│   └── page.tsx            # Main application page
+├── components/             # React components
+│   ├── ui/                 # Reusable UI components (shadcn/ui)
+│   ├── intent-builder.tsx  # Quote request interface
+│   ├── intent-signing.tsx  # Intent signing simulation
 │   ├── auction-simulator.tsx # Solver auction visualization
 │   ├── solver-selection.tsx # Winner selection display
-│   ├── settlement-flow.tsx  # Transaction settlement
-│   ├── redeem-card.tsx      # Token redemption
+│   ├── settlement-flow.tsx # Transaction settlement
+│   ├── redeem-card.tsx     # Token redemption
 │   ├── order-book-submission.tsx # Order book integration
-│   ├── step-indicator.tsx   # Progress visualization
-│   └── garden-logo.tsx      # Garden Protocol logo
-├── lib/                     # Utilities and configuration
-│   ├── store.ts             # Zustand state management
-│   └── utils.ts             # Helper functions
-├── data/                    # Mock data and constants
-│   └── mock-data.ts         # Sample tokens, chains, solvers
-├── public/                  # Static assets
-│   ├── garden-logo.png      # Garden Protocol branding
-│   └── garden-colors.png    # Brand color reference
-└── types/                   # TypeScript type definitions
-    └── index.ts             # Shared type definitions
-
+│   ├── step-indicator.tsx  # Progress visualization
+│   └── garden-logo.tsx     # Garden Protocol logo
+├── lib/                    # Utilities and configuration
+│   ├── store.ts           # Zustand state management
+│   └── utils.ts           # Helper functions
+├── data/                   # Mock data and constants
+│   └── mock-data.ts       # Sample tokens, chains, solvers
+├── public/                 # Static assets
+│   ├── garden-logo.png    # Garden Protocol branding
+│   └── garden-colors.png  # Brand color reference
+└── types/                  # TypeScript type definitions
+    └── index.ts           # Shared type definitions
+```
 ### Key Technologies
 
 - **Framework**: Next.js 14 with App Router
