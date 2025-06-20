@@ -120,7 +120,7 @@ intentflow/
 │   └── garden-colors.png  # Brand color reference
 └── types/                  # TypeScript type definitions
     └── index.ts           # Shared type definitions
-```
+
 ### Key Technologies
 
 - **Framework**: Next.js 14 with App Router
