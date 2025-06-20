@@ -13,7 +13,6 @@ IntentFlow provides an educational and interactive experience for understanding 
 ## ✨ Features
 
 ### 🔄 Complete Intent Lifecycle
-
 - **Quote Request**: Interactive token/chain selection with real-time quote generation
 - **Intent Signing**: JSON structure visualization with simulated wallet signing
 - **Order Book Submission**: Visual addition to pending intents pool
@@ -24,21 +23,18 @@ IntentFlow provides an educational and interactive experience for understanding 
 - **Token Redemption**: Final token receipt with redemption flow
 
 ### 🎨 Garden Protocol Branding
-
 - **Official Color Palette**: Mint, rose, and blue gradients from Garden's brand guidelines
 - **Custom Logo**: Recreation of Garden's distinctive rounded square logo
 - **Consistent Theming**: All components follow Garden's visual identity
 - **Professional Design**: Clean, modern interface reflecting Garden's brand values
 
 ### 📱 Responsive Design
-
 - **Mobile-First**: Optimized for mobile, tablet, and desktop experiences
 - **Touch-Friendly**: Large touch targets and intuitive interactions
 - **Adaptive Layouts**: Components stack and flow naturally across screen sizes
 - **Performance Optimized**: Fast loading and smooth animations on all devices
 
 ### ⚡ Technical Excellence
-
 - **Modern Stack**: Next.js 14 with App Router, TypeScript, Tailwind CSS
 - **Smooth Animations**: Framer Motion powers all transitions and interactions
 - **State Management**: Zustand for predictable and performant state handling
@@ -48,41 +44,32 @@ IntentFlow provides an educational and interactive experience for understanding 
 ## 🚀 Quick Start
 
 ### Prerequisites
-
 - Node.js 18.0 or later
 - npm, yarn, or pnpm package manager
 
 ### Installation
 
 1. **Clone the repository**
-   ```
-   git clone ""
+   \`\`\`bash
+   git clone https://github.com/garden-protocol/intentflow.git
    cd intentflow
- ```
+   \`\`\`
 
 2. **Install dependencies**
-   ```
+   \`\`\`bash
    npm install
-
    # or
-
    yarn install
-
    # or
-
    pnpm install
-   ```
+   \`\`\`
 
 3. **Start development server**
    \`\`\`bash
    npm run dev
-
    # or
-
    yarn dev
-
    # or
-
    pnpm dev
    \`\`\`
 
@@ -92,62 +79,60 @@ IntentFlow provides an educational and interactive experience for understanding 
 ## 🏗️ Project Architecture
 
 ### Directory Structure
-
-````plaintext
 intentflow/
 ├── app/                     # Next.js App Router
-│   ├── globals.css         # Global styles and CSS variables
-│   ├── layout.tsx          # Root layout with metadata
-│   └── page.tsx            # Main application page
-├── components/             # React components
-│   ├── ui/                 # Reusable UI components (shadcn/ui)
-│   ├── intent-builder.tsx  # Quote request interface
-│   ├── intent-signing.tsx  # Intent signing simulation
+│   ├── globals.css          # Global styles and CSS variables
+│   ├── layout.tsx           # Root layout with metadata
+│   └── page.tsx             # Main application page
+├── components/              # React components
+│   ├── ui/                  # Reusable UI components (shadcn/ui)
+│   ├── intent-builder.tsx   # Quote request interface
+│   ├── intent-signing.tsx   # Intent signing simulation
 │   ├── auction-simulator.tsx # Solver auction visualization
 │   ├── solver-selection.tsx # Winner selection display
-│   ├── settlement-flow.tsx # Transaction settlement
-│   ├── redeem-card.tsx     # Token redemption
+│   ├── settlement-flow.tsx  # Transaction settlement
+│   ├── redeem-card.tsx      # Token redemption
 │   ├── order-book-submission.tsx # Order book integration
-│   ├── step-indicator.tsx  # Progress visualization
-│   └── garden-logo.tsx     # Garden Protocol logo
-├── lib/                    # Utilities and configuration
-│   ├── store.ts           # Zustand state management
-│   └── utils.ts           # Helper functions
-├── data/                   # Mock data and constants
-│   └── mock-data.ts       # Sample tokens, chains, solvers
-├── public/                 # Static assets
-│   ├── garden-logo.png    # Garden Protocol branding
-│   └── garden-colors.png  # Brand color reference
-└── types/                  # TypeScript type definitions
-    └── index.ts           # Shared type definitions
+│   ├── step-indicator.tsx   # Progress visualization
+│   └── garden-logo.tsx      # Garden Protocol logo
+├── lib/                     # Utilities and configuration
+│   ├── store.ts             # Zustand state management
+│   └── utils.ts             # Helper functions
+├── data/                    # Mock data and constants
+│   └── mock-data.ts         # Sample tokens, chains, solvers
+├── public/                  # Static assets
+│   ├── garden-logo.png      # Garden Protocol branding
+│   └── garden-colors.png    # Brand color reference
+└── types/                   # TypeScript type definitions
+    └── index.ts             # Shared type definitions
 
 ### Key Technologies
 
-- **Framework**: Next.js 14 with App Router  
-- **Language**: TypeScript for type safety  
-- **Styling**: Tailwind CSS for utility-first styling  
-- **UI Components**: shadcn/ui for consistent design system  
-- **Animations**: Framer Motion for smooth interactions  
-- **State Management**: Zustand for lightweight state handling  
-- **Icons**: Lucide React for consistent iconography  
+- **Framework**: Next.js 14 with App Router
+- **Language**: TypeScript for type safety
+- **Styling**: Tailwind CSS for utility-first styling
+- **UI Components**: shadcn/ui for consistent design system
+- **Animations**: Framer Motion for smooth interactions
+- **State Management**: Zustand for lightweight state handling
+- **Icons**: Lucide React for consistent iconography
 
 ## 🎨 Design System
 
-### Color Palette (Garden Protocol)
 
-```css
+### Color Palette (Garden Protocol)
+\`\`\`css
 /* Main Colorway */
---garden-mint-500: #7BDCBA;    /* Primary background */
---garden-blue-500: #9BC8FF;    /* Primary gradient */
+--garden-mint-500: #7BDCBA    /* Primary background */
+--garden-blue-500: #9BC8FF    /* Primary gradient */
 
 /* Alternative Colorway 1 */
---garden-sky-500: #8DC0FF;     /* Alt background */
---garden-pink-500: #FFBBD3;    /* Alt gradient */
+--garden-sky-500: #8DC0FF     /* Alt background */
+--garden-pink-500: #FFBBD3    /* Alt gradient */
 
 /* Alternative Colorway 2 */
---garden-rose-500: #FCB9C2;    /* Accent background */
---garden-orange-500: #FDD79D;  /* Accent gradient */
-
+--garden-rose-500: #FCB9C2    /* Accent background */
+--garden-orange-500: #FDD79D  /* Accent gradient */
+\`\`\`
 
 ### Code Style and Standards
 
@@ -164,27 +149,8 @@ This project follows Vercel and Lee Robinson's best practices:
 - **Custom Hooks**: Extract reusable logic into custom hooks
 - **Error Boundaries**: Graceful error handling throughout the application
 
-#### Performance Optimizations
-- **Bundle Splitting**: Automatic code splitting with Next.js
-- **Image Optimization**: Next.js Image component for optimized loading
-- **Font Loading**: System fonts for zero layout shift
-- **CSS-in-JS**: Tailwind CSS for optimal bundle size
 
-#### TypeScript Best Practices
-- **Strict Mode**: Enabled for maximum type safety
-- **Interface Definitions**: Clear, reusable type definitions
-- **Generic Types**: Flexible, reusable component types
-- **Type Guards**: Runtime type checking where needed
-
-### State Management
-
-The application uses Zustand for state management with the following principles:
-
-- **Single Store**: Centralized state for the intent lifecycle
-- **Immutable Updates**: State updates follow immutability patterns
-- **Computed Values**: Derived state calculated on-demand
-- **Persistence**: Optional state persistence for user preferences
-
+\`\`\`
 
 ## 🎯 Usage Guide
 
@@ -242,39 +208,9 @@ The application uses Zustand for state management with the following principles:
 - Modify timing and easing functions
 - Customize transition durations and effects
 
-### Development Workflow
 
-1. **Fork Repository**
-   \`\`\`bash
-   git clone https://github.com/your-username/intentflow.git
-   cd intentflow
-   \`\`\`
 
-2. **Create Feature Branch**
-   \`\`\`bash
-   git checkout -b feature/amazing-feature
-   \`\`\`
-
-3. **Make Changes**
-   - Follow code style guidelines
-   - Add tests for new functionality
-   - Update documentation as needed
-
-4. **Commit Changes**
-   \`\`\`bash
-   git commit -m "feat: add amazing feature"
-   \`\`\`
-
-5. **Push and Create PR**
-   \`\`\`bash
-   git push origin feature/amazing-feature
-   \`\`\`
-
-## 📄 License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-
-## 🙏 Acknowledgments
+ 🙏 Acknowledgments
 
 - **Garden Protocol** for the brand guidelines and protocol inspiration
 - **Vercel** for the excellent Next.js framework and deployment platform
@@ -282,8 +218,8 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 - **Framer** for the powerful animation library
 - **Tailwind CSS** for the utility-first CSS framework
 
+---
 
 **Built with ❤️ for the Garden Protocol ecosystem**
 
 *IntentFlow - Making cross-chain intents accessible and understandable*
-````
