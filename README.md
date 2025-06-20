@@ -55,13 +55,13 @@ IntentFlow provides an educational and interactive experience for understanding 
 ### Installation
 
 1. **Clone the repository**
-   \`\`\`bash
+   ```
    git clone ""
    cd intentflow
-   \`\`\`
+ ```
 
 2. **Install dependencies**
-   \`\`\`bash
+   ```
    npm install
 
    # or
@@ -71,7 +71,7 @@ IntentFlow provides an educational and interactive experience for understanding 
    # or
 
    pnpm install
-   \`\`\`
+   ```
 
 3. **Start development server**
    \`\`\`bash
