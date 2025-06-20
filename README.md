@@ -13,6 +13,7 @@ IntentFlow provides an educational and interactive experience for understanding 
 ## ✨ Features
 
 ### 🔄 Complete Intent Lifecycle
+
 - **Quote Request**: Interactive token/chain selection with real-time quote generation
 - **Intent Signing**: JSON structure visualization with simulated wallet signing
 - **Order Book Submission**: Visual addition to pending intents pool
@@ -23,18 +24,21 @@ IntentFlow provides an educational and interactive experience for understanding 
 - **Token Redemption**: Final token receipt with redemption flow
 
 ### 🎨 Garden Protocol Branding
+
 - **Official Color Palette**: Mint, rose, and blue gradients from Garden's brand guidelines
 - **Custom Logo**: Recreation of Garden's distinctive rounded square logo
 - **Consistent Theming**: All components follow Garden's visual identity
 - **Professional Design**: Clean, modern interface reflecting Garden's brand values
 
 ### 📱 Responsive Design
+
 - **Mobile-First**: Optimized for mobile, tablet, and desktop experiences
 - **Touch-Friendly**: Large touch targets and intuitive interactions
 - **Adaptive Layouts**: Components stack and flow naturally across screen sizes
 - **Performance Optimized**: Fast loading and smooth animations on all devices
 
 ### ⚡ Technical Excellence
+
 - **Modern Stack**: Next.js 14 with App Router, TypeScript, Tailwind CSS
 - **Smooth Animations**: Framer Motion powers all transitions and interactions
 - **State Management**: Zustand for predictable and performant state handling
@@ -44,6 +48,7 @@ IntentFlow provides an educational and interactive experience for understanding 
 ## 🚀 Quick Start
 
 ### Prerequisites
+
 - Node.js 18.0 or later
 - npm, yarn, or pnpm package manager
 
@@ -51,25 +56,33 @@ IntentFlow provides an educational and interactive experience for understanding 
 
 1. **Clone the repository**
    \`\`\`bash
-   git clone https://github.com/garden-protocol/intentflow.git
+   git clone ""
    cd intentflow
    \`\`\`
 
 2. **Install dependencies**
    \`\`\`bash
    npm install
+
    # or
+
    yarn install
+
    # or
+
    pnpm install
    \`\`\`
 
 3. **Start development server**
    \`\`\`bash
    npm run dev
+
    # or
+
    yarn dev
+
    # or
+
    pnpm dev
    \`\`\`
 
@@ -79,7 +92,8 @@ IntentFlow provides an educational and interactive experience for understanding 
 ## 🏗️ Project Architecture
 
 ### Directory Structure
-\`\`\`
+
+````plaintext
 intentflow/
 ├── app/                     # Next.js App Router
 │   ├── globals.css         # Global styles and CSS variables
@@ -106,7 +120,6 @@ intentflow/
 │   └── garden-colors.png  # Brand color reference
 └── types/                  # TypeScript type definitions
     └── index.ts           # Shared type definitions
-\`\`\`
 
 ### Key Technologies
 
@@ -119,6 +132,21 @@ intentflow/
 - **Icons**: Lucide React for consistent iconography
 
 ## 🎨 Design System
+### Color Palette (Garden Protocol)
+
+```css
+/* Main Colorway */
+--garden-mint-500: #7BDCBA;    /* Primary background */
+--garden-blue-500: #9BC8FF;    /* Primary gradient */
+
+/* Alternative Colorway 1 */
+--garden-sky-500: #8DC0FF;     /* Alt background */
+--garden-pink-500: #FFBBD3;    /* Alt gradient */
+
+/* Alternative Colorway 2 */
+--garden-rose-500: #FCB9C2;    /* Accent background */
+--garden-orange-500: #FDD79D;  /* Accent gradient */
+
 
 ### Typography
 - **Font Stack**: System fonts for optimal performance and consistency
@@ -140,28 +168,6 @@ intentflow/
 --garden-orange-500: #FDD79D  /* Accent gradient */
 \`\`\`
 
-### Responsive Breakpoints
-- **Mobile**: < 640px (sm)
-- **Tablet**: 640px - 1024px (md/lg)
-- **Desktop**: > 1024px (xl/2xl)
-
-### Component Guidelines
-- **Atomic Design**: Components built with reusability in mind
-- **Accessibility**: ARIA labels, semantic HTML, keyboard navigation
-- **Performance**: Lazy loading, optimized re-renders, efficient animations
-
-## 🔧 Development
-
-### Available Scripts
-
-\`\`\`bash
-# Development
-npm run dev          # Start development server
-npm run build        # Build for production
-npm run start        # Start production server
-npm run lint         # Run ESLint
-npm run type-check   # TypeScript type checking
-\`\`\`
 
 ### Code Style and Standards
 
@@ -199,19 +205,6 @@ The application uses Zustand for state management with the following principles:
 - **Computed Values**: Derived state calculated on-demand
 - **Persistence**: Optional state persistence for user preferences
 
-### Testing Strategy
-
-\`\`\`bash
-# Unit Tests
-npm run test         # Run Jest unit tests
-npm run test:watch   # Watch mode for development
-
-# E2E Tests
-npm run test:e2e     # Run Playwright E2E tests
-
-# Coverage
-npm run test:coverage # Generate coverage report
-\`\`\`
 
 ## 🎯 Usage Guide
 
@@ -258,12 +251,6 @@ npm run test:coverage # Generate coverage report
    - Transaction summary and details
    - Option to start new intent
 
-### Customization Options
-
-#### Theming
-- Modify `tailwind.config.ts` for custom color schemes
-- Update CSS variables in `globals.css` for brand colors
-- Customize component styles using Tailwind utilities
 
 #### Mock Data
 - Edit `data/mock-data.ts` to add new tokens, chains, or solvers
@@ -274,150 +261,6 @@ npm run test:coverage # Generate coverage report
 - Adjust Framer Motion configurations in components
 - Modify timing and easing functions
 - Customize transition durations and effects
-
-## 🔌 API Integration
-
-### Replacing Mock Data
-
-To integrate with real Garden Protocol APIs:
-
-1. **Create API Client**
-   \`\`\`typescript
-   // lib/api-client.ts
-   export class GardenAPIClient {
-     async getQuote(params: QuoteParams): Promise<Quote> {
-       // Implementation
-     }
-     
-     async submitIntent(intent: Intent): Promise<IntentResponse> {
-       // Implementation
-     }
-   }
-   \`\`\`
-
-2. **Update Store Actions**
-   \`\`\`typescript
-   // lib/store.ts
-   const apiClient = new GardenAPIClient()
-   
-   export const useIntentStore = create<IntentState>((set, get) => ({
-     // ... existing state
-     generateQuote: async (params) => {
-       const quote = await apiClient.getQuote(params)
-       set({ quote })
-     }
-   }))
-   \`\`\`
-
-3. **Environment Configuration**
-   \`\`\`bash
-   # .env.local
-   NEXT_PUBLIC_GARDEN_API_URL=https://api.garden.finance
-   GARDEN_API_KEY=your_api_key_here
-   \`\`\`
-
-## 🚀 Deployment
-
-### Vercel Deployment (Recommended)
-
-1. **Connect Repository**
-   - Import project to Vercel dashboard
-   - Connect GitHub/GitLab repository
-   - Configure build settings (auto-detected)
-
-2. **Environment Variables**
-   - Add production environment variables
-   - Configure API keys and endpoints
-   - Set up analytics and monitoring
-
-3. **Domain Configuration**
-   - Add custom domain if needed
-   - Configure SSL certificates
-   - Set up redirects and rewrites
-
-### Self-Hosted Deployment
-
-\`\`\`bash
-# Build for production
-npm run build
-
-# Start production server
-npm run start
-
-# Or use PM2 for process management
-pm2 start npm --name "intentflow" -- start
-\`\`\`
-
-### Docker Deployment
-
-\`\`\`dockerfile
-# Dockerfile
-FROM node:18-alpine AS base
-WORKDIR /app
-COPY package*.json ./
-RUN npm ci --only=production
-
-FROM base AS build
-COPY . .
-RUN npm run build
-
-FROM base AS runtime
-COPY --from=build /app/.next ./.next
-COPY --from=build /app/public ./public
-EXPOSE 3000
-CMD ["npm", "start"]
-\`\`\`
-
-## 🧪 Testing
-
-### Unit Testing
-- **Framework**: Jest with React Testing Library
-- **Coverage**: Aim for >80% code coverage
-- **Mocking**: Mock external dependencies and APIs
-- **Snapshots**: Visual regression testing for components
-
-### Integration Testing
-- **API Testing**: Test API integration points
-- **State Management**: Test Zustand store actions and selectors
-- **Component Integration**: Test component interactions
-
-### End-to-End Testing
-- **Framework**: Playwright for cross-browser testing
-- **User Flows**: Test complete intent lifecycle
-- **Accessibility**: Automated a11y testing
-- **Performance**: Core Web Vitals monitoring
-
-## 🔧 Performance Optimization
-
-### Core Web Vitals
-- **LCP**: Optimized with Next.js Image and font loading
-- **FID**: Minimized JavaScript bundle size
-- **CLS**: Stable layouts with proper sizing
-
-### Bundle Optimization
-- **Code Splitting**: Automatic with Next.js App Router
-- **Tree Shaking**: Remove unused code
-- **Dynamic Imports**: Lazy load heavy components
-
-### Caching Strategy
-- **Static Assets**: Long-term caching for images and fonts
-- **API Responses**: Appropriate cache headers
-- **Build Artifacts**: Optimized build caching
-
-## 🛡️ Security
-
-### Best Practices
-- **Input Validation**: Sanitize all user inputs
-- **XSS Prevention**: Proper escaping and CSP headers
-- **CSRF Protection**: Built-in Next.js protections
-- **Dependency Scanning**: Regular security audits
-
-### Environment Security
-- **Environment Variables**: Secure API key management
-- **HTTPS**: Enforce secure connections
-- **Headers**: Security headers configuration
-
-## 🤝 Contributing
 
 ### Development Workflow
 
@@ -447,19 +290,6 @@ CMD ["npm", "start"]
    git push origin feature/amazing-feature
    \`\`\`
 
-### Code Review Process
-- **Automated Checks**: CI/CD pipeline runs tests and linting
-- **Manual Review**: Code review by maintainers
-- **Documentation**: Update docs for significant changes
-- **Testing**: Ensure adequate test coverage
-
-### Contribution Guidelines
-- Follow existing code style and patterns
-- Write clear, descriptive commit messages
-- Include tests for new features
-- Update documentation for API changes
-- Respect the project's license and CoC
-
 ## 📄 License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
@@ -472,24 +302,8 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 - **Framer** for the powerful animation library
 - **Tailwind CSS** for the utility-first CSS framework
 
-## 📞 Support
-
-### Getting Help
-- **Documentation**: Check this README and inline code comments
-- **Issues**: Open a GitHub issue for bugs or feature requests
-- **Discussions**: Use GitHub Discussions for questions and ideas
-- **Community**: Join the Garden Protocol Discord for community support
-
-### Reporting Issues
-When reporting issues, please include:
-- Operating system and browser version
-- Node.js version
-- Steps to reproduce the issue
-- Expected vs actual behavior
-- Screenshots or error messages
-
----
 
 **Built with ❤️ for the Garden Protocol ecosystem**
 
 *IntentFlow - Making cross-chain intents accessible and understandable*
+````

@@ -1,29 +1,32 @@
-import type React from "react"
-import type { Metadata } from "next"
-import { Inter } from "next/font/google"
-import "./globals.css"
-
-const inter = Inter({
-  subsets: ["latin"],
-  display: "swap",
-  variable: "--font-inter",
-})
+import type React from "react";
+import type { Metadata } from "next";
+import "./globals.css";
 
 export const metadata: Metadata = {
   title: {
     default: "IntentFlow - Garden Protocol Intent Lifecycle Simulator",
     template: "%s | IntentFlow",
   },
-  description: "Visualize and understand the complete lifecycle of cross-chain intents in the Garden Protocol",
-  keywords: ["garden protocol", "intent-based", "cross-chain", "defi", "blockchain", "cryptocurrency", "web3"],
-  authors: [{ name: "Garden Protocol Team", url: "https://garden.finance" }],
-  creator: "Garden Protocol",
+  description:
+    "Visualize and understand the complete lifecycle of cross-chain intents in the Garden Protocol",
+  keywords: [
+    "garden protocol",
+    "intent-based",
+    "cross-chain",
+    "defi",
+    "blockchain",
+    "cryptocurrency",
+    "web3",
+  ],
+  authors: [{ name: "Qudus Adeyemi", url: "https://garden.finance" }],
+  creator: "Qudus Adeyemi",
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://intentflow.garden.finance",
+    url: "",
     title: "IntentFlow - Garden Protocol Intent Lifecycle Simulator",
-    description: "Visualize and understand the complete lifecycle of cross-chain intents in the Garden Protocol",
+    description:
+      "Visualize and understand the complete lifecycle of cross-chain intents in the Garden Protocol",
     siteName: "IntentFlow",
     images: [
       {
@@ -34,38 +37,18 @@ export const metadata: Metadata = {
       },
     ],
   },
-  twitter: {
-    card: "summary_large_image",
-    title: "IntentFlow - Garden Protocol Intent Lifecycle Simulator",
-    description: "Visualize and understand the complete lifecycle of cross-chain intents in the Garden Protocol",
-    images: ["/og-image.png"],
-    creator: "@gardenfinance",
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      "max-video-preview": -1,
-      "max-image-preview": "large",
-      "max-snippet": -1,
-    },
-  },
-  verification: {
-    google: "your-google-verification-code",
-  },
-    generator: 'v0.dev'
-}
+};
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={inter.variable} suppressHydrationWarning>
-      <body className="min-h-screen bg-background font-sans antialiased">{children}</body>
+    <html lang="en" suppressHydrationWarning>
+      <body className="min-h-screen bg-background font-satoshi antialiased">
+        {children}
+      </body>
     </html>
-  )
+  );
 }

@@ -1,4 +1,4 @@
-import type { Token, Chain, Solver } from "@/types"
+import type { Token, Chain, Solver } from "@/types";
 
 /**
  * Mock token data for demonstration
@@ -9,30 +9,30 @@ export const mockTokens: Token[] = [
     name: "Ethereum",
     address: "0x0000000000000000000000000000000000000000",
     decimals: 18,
-    logoUrl: "/placeholder.svg?height=32&width=32",
+    logoUrl: "/chains/ethereum.svg",
   },
   {
     symbol: "USDC",
     name: "USD Coin",
     address: "0xa0b86a33e6776e681c6c5b7f4b8c5b8e8f8e8f8e",
     decimals: 6,
-    logoUrl: "/placeholder.svg?height=32&width=32",
+    logoUrl: "/tokens/usdc.svg",
   },
   {
     symbol: "WBTC",
     name: "Wrapped Bitcoin",
     address: "0x2260fac5e5542a773aa44fbcfedf7c193bc2c599",
     decimals: 8,
-    logoUrl: "/placeholder.svg?height=32&width=32",
+    logoUrl: "/tokens/wbtc.svg",
   },
   {
     symbol: "ARB",
     name: "Arbitrum",
     address: "0x912ce59144191c1204e64559fe8253a0e49e6548",
     decimals: 18,
-    logoUrl: "/placeholder.svg?height=32&width=32",
+    logoUrl: "/chains/arbitrum.svg",
   },
-]
+];
 
 /**
  * Mock blockchain data for demonstration
@@ -41,24 +41,24 @@ export const mockChains: Chain[] = [
   {
     id: 1,
     name: "Ethereum",
-    logoUrl: "/placeholder.svg?height=32&width=32",
+    logoUrl: "/chains/ethereum.svg",
   },
   {
     id: 42161,
     name: "Arbitrum",
-    logoUrl: "/placeholder.svg?height=32&width=32",
+    logoUrl: "/chains/arbitrum.svg",
   },
   {
     id: 10,
     name: "Optimism",
-    logoUrl: "/placeholder.svg?height=32&width=32",
+    logoUrl: "/chains/optimism.svg",
   },
   {
     id: 137,
     name: "Polygon",
-    logoUrl: "/placeholder.svg?height=32&width=32",
+    logoUrl: "/chains/polygon.svg",
   },
-]
+];
 
 /**
  * Mock solver data for auction simulation
@@ -106,7 +106,7 @@ export const mockSolvers: Solver[] = [
       estimatedTime: "1-2 minutes",
     },
   },
-]
+];
 
 /**
  * Generate a mock quote based on input parameters
@@ -115,20 +115,24 @@ export const mockSolvers: Solver[] = [
  * @param outputToken - Output token
  * @returns Mock quote object
  */
-export function generateMockQuote(inputAmount: string, inputToken: Token, outputToken: Token) {
-  const amount = Number.parseFloat(inputAmount) || 0
-  let rate = 1
+export function generateMockQuote(
+  inputAmount: string,
+  inputToken: Token,
+  outputToken: Token
+) {
+  const amount = Number.parseFloat(inputAmount) || 0;
+  let rate = 1;
 
   // Mock exchange rates - in production, this would come from an API
   if (inputToken.symbol === "ETH" && outputToken.symbol === "USDC") {
-    rate = 2847.32
+    rate = 2847.32;
   } else if (inputToken.symbol === "USDC" && outputToken.symbol === "ETH") {
-    rate = 0.000351
+    rate = 0.000351;
   } else if (inputToken.symbol === "WBTC" && outputToken.symbol === "USDC") {
-    rate = 43250.18
+    rate = 43250.18;
   }
 
-  const outputAmount = (amount * rate * 0.999).toFixed(6) // 0.1% fee
+  const outputAmount = (amount * rate * 0.999).toFixed(6); // 0.1% fee
 
   return {
     inputAmount,
@@ -136,5 +140,5 @@ export function generateMockQuote(inputAmount: string, inputToken: Token, output
     rate,
     fee: "0.1%",
     estimatedTime: "2-3 minutes",
-  }
+  };
 }

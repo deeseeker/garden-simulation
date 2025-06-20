@@ -1,16 +1,16 @@
-"use client"
+"use client";
 
-import { motion, AnimatePresence } from "framer-motion"
-import { useIntentStore } from "@/lib/store"
-import { STEPS, ANIMATION_DURATION } from "@/lib/constants"
-import StepIndicator from "@/components/step-indicator"
-import IntentBuilder from "@/components/intent-builder"
-import IntentSigning from "@/components/intent-signing"
-import OrderBookSubmission from "@/components/order-book-submission"
-import AuctionSimulator from "@/components/auction-simulator"
-import SolverSelection from "@/components/solver-selection"
-import SettlementFlow from "@/components/settlement-flow"
-import RedeemCard from "@/components/redeem-card"
+import { motion, AnimatePresence } from "framer-motion";
+import { useIntentStore } from "@/lib/store";
+import { STEPS, ANIMATION_DURATION } from "@/lib/constants";
+import StepIndicator from "@/components/step-indicator";
+import IntentBuilder from "@/components/intent-builder";
+import IntentSigning from "@/components/intent-signing";
+import OrderBookSubmission from "@/components/order-book-submission";
+import AuctionSimulator from "@/components/auction-simulator";
+import SolverSelection from "@/components/solver-selection";
+import SettlementFlow from "@/components/settlement-flow";
+import RedeemCard from "@/components/redeem-card";
 
 /**
  * Step component mapping for the intent lifecycle
@@ -24,15 +24,16 @@ const stepComponents = {
   6: SettlementFlow,
   7: SettlementFlow, // Same component for both settlement steps
   8: RedeemCard,
-} as const
+} as const;
 
 /**
  * Main application page component
  * Renders the complete intent lifecycle simulator
  */
 export default function IntentFlow() {
-  const currentStep = useIntentStore((state) => state.currentStep)
-  const StepComponent = stepComponents[currentStep as keyof typeof stepComponents] || IntentBuilder
+  const currentStep = useIntentStore((state) => state.currentStep);
+  const StepComponent =
+    stepComponents[currentStep as keyof typeof stepComponents] || IntentBuilder;
 
   return (
     <div className="bg-garden-main min-h-screen">
@@ -41,12 +42,15 @@ export default function IntentFlow() {
         <header className="text-center mb-6 sm:mb-8">
           <div className="flex items-center justify-center gap-2 sm:gap-3 mb-3 sm:mb-4">
             <div className="w-8 h-8 sm:w-12 sm:h-12 bg-white rounded-xl sm:rounded-2xl p-1.5 sm:p-2 shadow-lg">
-              <svg viewBox="0 0 100 100" className="w-full h-full" aria-hidden="true">
-                <path d="M20 20h60v60H20z" fill="#FCB9C2" rx="20" />
-                <path d="M35 30h8v40h-8zm12 0h8v15h-8zm0 25h8v15h-8z" fill="#fff" />
-              </svg>
+              <img
+                src="/garden_logomark.svg"
+                alt="Garden Protocol Logo"
+                className="w-full h-full object-contain"
+              />
             </div>
-            <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white">IntentFlow</h1>
+            <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white">
+              IntentFlow
+            </h1>
           </div>
           <p className="text-sm sm:text-base lg:text-lg text-white/90 px-4">
             Garden Protocol Intent Lifecycle Simulator
@@ -72,5 +76,5 @@ export default function IntentFlow() {
         </main>
       </div>
     </div>
-  )
+  );
 }

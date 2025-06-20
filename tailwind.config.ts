@@ -1,4 +1,4 @@
-import type { Config } from "tailwindcss"
+import type { Config } from "tailwindcss";
 
 const config: Config = {
   darkMode: ["class"],
@@ -137,6 +137,9 @@ const config: Config = {
         "garden-alt1": "linear-gradient(135deg, #8DC0FF 0%, #FFBBD3 100%)",
         "garden-alt2": "linear-gradient(135deg, #FCB9C2 0%, #FDD79D 100%)",
       },
+      fontFamily: {
+        satoshi: "Satoshi-Variable, sans-serif",
+      },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
@@ -159,6 +162,6 @@ const config: Config = {
     },
   },
   plugins: [require("tailwindcss-animate")],
-} satisfies Config
+} satisfies Config;
 
-export default config
+export default config;
